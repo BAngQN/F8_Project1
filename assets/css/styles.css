@@ -245,12 +245,12 @@ a {
 .feature {
     background: #f5fafe;
     margin-top: 120px;
+    padding: 110px 0;
 }
 .feature .sub-title {
     color: #000339;
     font-size: 35px;
     font-weight: 600;
-    padding-top: 110px;
 }
 
 .feature .row {
@@ -264,4 +264,63 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.87;
+}
+
+.list-feature {
+    margin-top: 68px;
+    display: flex;
+    gap: 30px;
+}
+
+.feature-item {
+    border-radius: 12px;
+    /* overflow: hidden; */
+    background: #fff;
+    flex: 1;
+    box-shadow: 0px 65px 80px -46px rgba(226, 238, 249, 0.6);
+}
+
+.feature-item .thumbnail {
+    width: 100%;
+    height: 227px;
+    /*  specify how an <img> or <video> should be resized to fit its container */
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.feature-item .body {
+    padding: 17px 20px 24px;
+}
+
+.feature-item .feature-name {
+    color: #000339;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 17px;
+}
+
+.feature-item .address {
+    color: #a3a6ab;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 11px;
+}
+
+.feature-item .info {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.info .label {
+    color: #4d4d52;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.014rem;
+    margin-left: 8px;
+}
+
+.info .icon:not(.info .icon:first-child) {
+    margin-left: 23px;
 }
