@@ -421,7 +421,7 @@ a {
     font-family: "Circular Std";
     font-size: 0.7261rem;
     font-weight: 450;
-    background-color: #1f3bb0;
+    background-color: var(--bg-color, white);
 }
 
 .stats .img-block .image {
