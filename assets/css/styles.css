@@ -14,6 +14,11 @@ html {
     font-size: 62.5%;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
@@ -68,17 +73,20 @@ a {
 }
 
 /* ============Header========= */
-.header {
-    height: 100vh;
-    width: 100%;
-    position: relative;
+
+.fixed-header {
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+    padding-top: 26px;
     background-color: #e6f0ff;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -115,19 +123,28 @@ a {
 }
 
 /* =============Hero Section============ */
-.hero .info {
-    width: 50%;
-    margin-top: 130px;
+.hero-wrap {
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #e6f0ff;
+    justify-content: center;
 }
 
-.hero .sub_title {
+.hero-wrap .info {
+    width: 50%;
+}
+
+.hero-wrap .sub_title {
     font-weight: 500;
     font-size: 1.8rem;
     letter-spacing: 0.018rem;
     color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
     font-weight: 700;
     font-size: 6.2rem;
@@ -135,7 +152,7 @@ a {
     color: #000336;
 }
 
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
     font-weight: 400;
     font-size: 1.8rem;
@@ -143,12 +160,12 @@ a {
     color: #5a6473;
 }
 
-.hero .hero-cta {
+.hero-wrap .hero-cta {
     min-width: 170px;
     margin-top: 40px;
 }
 
-.hero .hero-img {
+.hero-wrap .hero-img {
     position: absolute;
     bottom: 0;
     right: calc((100vw - 1110px) / 2 - 100px);
@@ -183,10 +200,23 @@ a {
     margin-top: 70px;
 }
 
+.logo-clients > a {
+    padding: 0px 42px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.logo-clients > a:hover {
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
 /* ===========Guide============ */
 .guide {
     margin-top: 40px;
     padding: 79px 0px;
+    scroll-margin-top: 79px;
 }
 
 .guide .sub_title {
@@ -341,6 +371,7 @@ a {
     margin-top: 75px;
     padding: 50px 0;
     background: #fff;
+    scroll-margin-top: 50px;
 }
 
 .stats .content {
@@ -493,7 +524,8 @@ a {
 
 /* Subscription */
 .subscription {
-    margin-top: 90px;
+    padding-top: 90px;
+    scroll-margin-top: 90px;
 }
 
 .subscription .body {
@@ -563,11 +595,11 @@ a {
 }
 
 .footer .list {
-    margin-top: 42px;
+    margin-top: 40px;
 }
 
 .footer .item {
-    margin-top: 18px;
+    margin-top: 21px;
 }
 
 .footer .item a,
@@ -582,12 +614,12 @@ a {
 .footer .social {
     margin-top: 40px;
     white-space: normal;
-    line-height: 2.8rem;
+    line-height: 1.75;
 }
 
 .footer .social {
     display: flex;
-    column-gap: 4px;
+    column-gap: 16px;
 }
 
 .footer .social-link {
